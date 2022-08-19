@@ -9,16 +9,16 @@ import {
 } from "@/types"
 
 export interface ISeasonFeeds {
-    getSeasonInfo(): Promise<SeasonInfo>
-    getSeasonLeader(): Promise<SeasonLeaders>
-    getSeasonLineups(): Promise<SeasonLineups>
-    getSeasonLinks(): Promise<SeasonLinks>
-    getSeasonMissingPlayers(): Promise<SeasonMissingPlayers>
-    getSeasonPlayers(): Promise<SeasonPlayers>
-    getSeasonProbabilities(): Promise<SeasonProbabilities>
-    getSeasonOverUnderStatistics(): Promise<SeasonOverUnderStatistics>
-    getSeasonSchedule(): Promise<SeasonSchedule>
-    getSeasonStandings(): Promise<SeasonStandings>
-    getSeasonSummaries(): Promise<SeasonSummaries>
-    getSeasonTransfers(): Promise<SeasonTransfers>
+    getSeasonInfo(season: string): Promise<SeasonInfo>
+    getSeasonLeader(season: string): Promise<SeasonLeaders>
+    getSeasonLineups(season: string, offset: number, start: number, limit: number): Promise<SeasonLineups>
+    getSeasonLinks(season: string): Promise<SeasonLinks>
+    getSeasonMissingPlayers(season: string): Promise<SeasonMissingPlayers>
+    getSeasonPlayers(season: string, offset: number, limit: number, start: number): Promise<SeasonPlayers>
+    getSeasonProbabilities(season: string): Promise<SeasonProbabilities>
+    getSeasonOverUnderStatistics(season: string): Promise<SeasonOverUnderStatistics>
+    getSeasonSchedule(season: string): Promise<SeasonSchedule>
+    getSeasonStandings(season: string): Promise<SeasonStandings>
+    getSeasonSummaries(season: string, offset: number, limit: number, start: number): Promise<SeasonSummaries>
+    getSeasonTransfers(season: string): Promise<SeasonTransfers>
 }
